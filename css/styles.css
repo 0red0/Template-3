@@ -45,17 +45,17 @@ main {
 }
 @media (min-width: 767px) {
     main {
-        width: 733px;
+        width: 722px;
     }
 }
 @media (min-width: 990px) {
     main {
-        width: 933px;
+        width: 923px;
     }
 }
 @media (min-width: 1200px) {
     main {
-        width: 1150px;
+        width: 1130px;
     }
 }
 /* ---Global style--- */
@@ -1103,4 +1103,99 @@ main {
         width: 100%;
     }
 }
-/* EVENTS */ ;
+/* EVENTS */
+/* PRICING PLANS */
+.pricing-plans {
+    padding-top: var(--paddingA);
+    padding-bottom: var(--paddingA);
+    background-color: var(--colorC);
+}
+.pricing-plans .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+.pricing-plans .content .box {
+    background-color: #fff;
+    box-shadow: 0 1px 10px 5px #ccc;
+    position: relative;
+}
+.pricing-plans .box.advanced::before {
+    content: "Most Popular";
+    position: absolute;
+    top: 43px;
+    right: -20px;
+    background-color: var(--colorB);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transform: rotate(90deg);
+}
+.pricing-plans .box.advanced::after {
+    content: "";
+    position: absolute;
+    top: 52px;
+    right: -20px;
+    background-color: var(--colorB);
+    top: 112px;
+    right: 23px;
+    background-color: var(--colorB);
+    border-width: 14px 14px 14px 14px;
+    border-color: var(--colorB) var(--colorB) white var(--colorB);
+    border-style: solid;
+}
+.pricing-plans .content .box h2 {
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+.pricing-plans .content .box img {
+    width: 90px;
+    height: 90px;
+    margin: 20px 0;
+}
+.pricing-plans .content .box .price {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: var(--colorA);
+}
+.pricing-plans .content .box p {
+    color: #777;
+    font-size: 0.9em;
+}
+.pricing-plans .content .box ul {
+    margin: 20px 0;
+    text-align: left;
+}
+.pricing-plans .content .box ul li {
+    padding: 15px 0;
+    padding-left: 20%;
+    border-top: 1px solid #eee;
+    font-size: 0.95em;
+    position: relative;
+}
+.pricing-plans .content .box ul li:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    color: var(--colorA);
+    position: absolute;
+    left: 10%;
+}
+.pricing-plans .content .box a {
+    display: block;
+    width: fit-content;
+    border: 1px solid var(--colorA);
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin: 30px auto;
+    font-weight: bold;
+    color: var(--colorA);
+    transition: 0.3s;
+}
+.pricing-plans .content .box a:hover {
+    background-color: var(--colorB);
+    color: #fff;
+}
+
+/* PRICING PLANS */
