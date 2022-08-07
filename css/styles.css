@@ -577,7 +577,6 @@ main {
     display: block;
     font-size: 1.3em;
     font-weight: bold;
-
     border-radius: 5px;
     width: fit-content;
     padding: 10px 30px;
@@ -1109,6 +1108,18 @@ main {
     padding-top: var(--paddingA);
     padding-bottom: var(--paddingA);
     background-color: var(--colorC);
+    position: relative;
+}
+.pricing-plans::before {
+    position: absolute;
+    content: url(/temp3Images/dots.png);
+    right: -5%;
+}
+.pricing-plans::after {
+    position: absolute;
+    content: url(/temp3Images/dots.png);
+    bottom: 20%;
+    left: -12%;
 }
 .pricing-plans .content {
     display: grid;
@@ -1120,30 +1131,52 @@ main {
     background-color: #fff;
     box-shadow: 0 1px 10px 5px #ccc;
     position: relative;
+    z-index: 0;
+}
+.pricing-plans .content .advanced {
+    transform: translateY(-15px);
 }
 .pricing-plans .box.advanced::before {
     content: "Most Popular";
     position: absolute;
-    top: 43px;
+    width: 120px;
+    top: 53px;
     right: -20px;
     background-color: var(--colorB);
     color: #ffffff;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 6px 10px;
     transform: rotate(90deg);
 }
 .pricing-plans .box.advanced::after {
     content: "";
     position: absolute;
-    top: 52px;
-    right: -20px;
-    background-color: var(--colorB);
-    top: 112px;
-    right: 23px;
-    background-color: var(--colorB);
-    border-width: 14px 14px 14px 14px;
-    border-color: var(--colorB) var(--colorB) white var(--colorB);
-    border-style: solid;
+    top: 99px;
+    right: 29px;
+    border: 20px solid transparent;
+    border-bottom-color: #fff;
+}
+.pricing-plans .content .box .overlay:before,
+.pricing-plans .content .box .overlay:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 50%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: 0.4s;
+}
+.pricing-plans .content .box .overlay:before {
+    top: 0;
+    left: 0;
+}
+.pricing-plans .content .box .overlay:after {
+    right: 0;
+    bottom: 0;
+}
+.pricing-plans .content .box:hover .overlay:before,
+.pricing-plans .content .box:hover .overlay:after {
+    width: 100%;
 }
 .pricing-plans .content .box h2 {
     letter-spacing: -2px;
@@ -1185,13 +1218,14 @@ main {
 .pricing-plans .content .box a {
     display: block;
     width: fit-content;
-    border: 1px solid var(--colorA);
+    border: 2px solid var(--colorA);
     border-radius: 5px;
     padding: 15px 30px;
     margin: 30px auto;
     font-weight: bold;
     color: var(--colorA);
     transition: 0.3s;
+    z-index: 1;
 }
 .pricing-plans .content .box a:hover {
     background-color: var(--colorB);
