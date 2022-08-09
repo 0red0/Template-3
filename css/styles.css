@@ -981,6 +981,7 @@ main {
    padding-top: var(--paddingA);
    padding-bottom: var(--paddingA);
    position: relative;
+   overflow: hidden;
 }
 .events::before {
    content: url(/temp3Images/dots.png);
@@ -1109,6 +1110,7 @@ main {
    padding-bottom: var(--paddingA);
    background-color: var(--colorC);
    position: relative;
+   overflow: hidden;
 }
 .pricing-plans::before {
    position: absolute;
@@ -1382,3 +1384,194 @@ main {
    font-style: italic;
 }
 /* Stats */
+/* DISCOUNT */
+.discount {
+   display: flex;
+}
+.discount .info {
+   animation: switch 3s ease infinite alternate;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   z-index: -1;
+   text-align: center;
+   flex: 1 1 50%;
+   color: #fff;
+   padding: 20px;
+}
+.discount .info:before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   background-color: hwb(207 13% 5% / 0.95);
+   z-index: -1;
+}
+@keyframes switch {
+   from {
+      background: url(/temp3Images/discount-background2.jpg);
+   }
+   to {
+      background: url(/temp3Images/discount-background1.jpg);
+   }
+}
+.discount .info h2 {
+   font-size: 2em;
+   margin: 30px 0;
+}
+.discount .info p {
+   line-height: 1.7;
+   margin: 20px;
+}
+.discount .info img {
+   max-width: 350px;
+}
+.discount .request {
+   padding: 20px;
+   flex: 1 1 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.discount .request h2 {
+   font-size: 2.5em;
+   margin: 30px 0;
+}
+.discount .request input,
+textarea {
+   width: 300px;
+   border: none;
+   outline: none;
+   background-color: #f9f9f9;
+   margin: 20px 0;
+   padding: 15px;
+   border-bottom: 1px solid #ccc;
+}
+.discount .request input[type="submit"] {
+   background-color: var(--colorA);
+   color: white;
+   font-weight: bold;
+   font-size: 1.2em;
+   border: none;
+   cursor: pointer;
+}
+.discount .request input[type="submit"]:hover {
+   background-color: var(--colorB);
+}
+@media (max-width: 991px) {
+   .discount {
+      flex-direction: column;
+   }
+}
+/* DISCOUNT */
+/* CONTACTS */
+.contacts {
+   padding-top: var(--paddingA);
+   background-color: #191919;
+   color: white;
+}
+.contacts .content {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 30px;
+   padding-bottom: var(--paddingA);
+}
+@media (max-width: 767) {
+   .contacts .content {
+      text-align: center;
+   }
+}
+.contacts .content .box1 h2 {
+   font-size: 2.8em;
+   margin-bottom: 20px;
+}
+.contacts .content .box1 a {
+   background-color: #00968775;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   margin: 4px;
+}
+.contacts .content .box1 a:hover:first-of-type {
+   background-color: blue;
+}
+.contacts .content .box1 a:hover {
+   background-color: var(--colorA);
+}
+.contacts .content .box1 a:hover:last-of-type {
+   background-color: red;
+}
+.contacts .content .box1 i {
+   font-size: 1.5em;
+   color: rgba(255, 255, 255, 0.644);
+}
+.contacts .content .box1 p {
+   line-height: 1.7;
+   margin: 20px 0;
+   color: #999;
+}
+.contacts .content .box2 ul li {
+   padding: 15px;
+}
+.contacts .content .box2 ul li:not(:last-of-type) {
+   border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+}
+.contacts .content .box2 ul li a {
+   display: block;
+   color: white;
+   opacity: 0.8;
+   transition: 0.3s;
+   position: relative;
+}
+.contacts .content .box2 ul li a::before {
+   font-family: "Font Awesome 5 Free";
+   content: "\f101";
+   font-weight: 900;
+   color: var(--colorA);
+   margin-right: 15px;
+}
+.contacts .content .box2 ul a:hover {
+   transform: translate(10px);
+   opacity: 2;
+}
+.contacts .content .box3 .info {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+}
+.contacts .content .box3 i {
+   font-size: 1.5em;
+   color: var(--colorA);
+   padding: 10px;
+   margin-right: 10px;
+}
+.contacts .content .box3 p {
+   color: #ccc;
+   line-height: 1.7;
+   padding: 10px;
+}
+.contacts .content .box3 {
+}
+
+.contacts .content .box4 {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+   gap: 5px;
+   align-content: center;
+}
+.contacts .content .box4 img {
+   max-width: 80px;
+   border: 5px solid white;
+   margin: 2px;
+}
+.contacts footer {
+   max-width: 100%;
+   text-align: center;
+   padding: 25px;
+   border-top: 1px solid rgba(255, 255, 255, 0.342);
+}
+/* CONTACTS */
