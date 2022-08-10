@@ -997,7 +997,7 @@ main {
    overflow: hidden;
 }
 .events::before {
-   content: url(/temp3Images/dots.png);
+   content: url(../temp3Images/dots.png);
    position: absolute;
    top: 10%;
    right: -5%;
@@ -1005,7 +1005,7 @@ main {
    z-index: -1;
 }
 .events::after {
-   content: url("/temp3Images/dots.png");
+   content: url("../temp3Images/dots.png");
    position: absolute;
    bottom: 10%;
    left: 0;
@@ -1127,12 +1127,12 @@ main {
 }
 .pricing-plans::before {
    position: absolute;
-   content: url(/temp3Images/dots.png);
+   content: url(../temp3Images/dots.png);
    right: -5%;
 }
 .pricing-plans::after {
    position: absolute;
-   content: url(/temp3Images/dots.png);
+   content: url(../temp3Images/dots.png);
    bottom: 20%;
    left: -12%;
 }
@@ -1424,10 +1424,10 @@ main {
 @keyframes switch {
    0%,
    100% {
-      background: url(/temp3Images/discount-background2.jpg);
+      background: url(../temp3Images/discount-background2.jpg);
    }
    50% {
-      background: url(/temp3Images/discount-background1.jpg);
+      background: url(../temp3Images/discount-background1.jpg);
    }
 }
 .discount .info h2 {
