@@ -23,6 +23,7 @@ body > .top-pg {
    position: fixed;
    bottom: 0;
    margin: 0 0 15px 50px;
+   display: none;
 }
 body > .top-pg i {
    font-size: 2.5rem;
@@ -1561,6 +1562,7 @@ textarea {
    font-size: 1.5em;
    color: var(--colorA);
    margin-right: 10px;
+   list-style-position: outside;
 }
 .contacts .content .box3 p {
    color: #ccc;
