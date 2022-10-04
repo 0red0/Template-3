@@ -12,6 +12,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+   <script src="temp3.js" defer></script>
 </head>
 
 <body>
@@ -745,25 +746,25 @@
             <div class="bars">
                <p>HTML</p>
                <div class="bar-back" data-size="80%">
-                  <span style="width: 80%"></span>
+                  <span style="width: 0" data-size="80%"></span>
                </div>
                <p>CSS</p>
-               <div class="bar-back" data-size="85%">
-                  <span style="width: 85%"></span>
+               <div class=" bar-back" data-size="85%">
+                  <span style="width: 0" data-size="85%"></span>
                </div>
                <p>JavaScript</p>
-               <div class="bar-back" data-size="70%">
-                  <span style="width: 70%"></span>
+               <div class=" bar-back" data-size="70%">
+                  <span style="width: 0" data-size="70%"></span>
                </div>
                <p>Python</p>
-               <div class="bar-back" data-size="80%">
-                  <span style="width: 80%"></span>
+               <div class=" bar-back" data-size="80%">
+                  <span style="width: 0" data-size="80%"></span>
                </div>
             </div>
          </div>
       </main>
    </div>
-   <div class="how">
+   <div class=" how">
       <main>
          <div class="component">HOW IT WORKS</div>
          <div class="content" id="how-it-works">
@@ -1053,24 +1054,5 @@
       <footer>Made With &lt;3 By Elzero</footer>
    </div>
 </body>
-<script>
-   document.addEventListener("DOMContentLoaded", function (event) {
-      var scrollpos = localStorage.getItem("scrollpos");
-      if (scrollpos) window.scrollTo(0, scrollpos);
-   });
-
-   window.onbeforeunload = function (e) {
-      localStorage.setItem("scrollpos", window.scrollY);
-   };
-
-   let topPg = document.querySelector(".top-pg")
-   window.onscroll = (function () {
-      if (window.scrollY >= 600) {
-         topPg.style.display = "block"
-      } else {
-         topPg.style.display = "none"
-      }
-   })
-</script>
 
 </html>

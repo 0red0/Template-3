@@ -24,6 +24,7 @@ body > .top-pg {
    bottom: 0;
    margin: 0 0 15px 50px;
    display: none;
+   z-index: 99;
 }
 body > .top-pg i {
    font-size: 2.5rem;
@@ -886,6 +887,7 @@ main {
    width: 100%;
    background-color: var(--colorB);
    position: relative;
+   transition: 0.6s;
 }
 .skills .container .bars .bar-back::before {
    content: attr(data-size);
